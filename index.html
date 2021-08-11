@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Playground</title>
+    <link rel='manifest' href='/manifest.json'>
+    <link rel="icon" sizes="192x192" href="//www.kcak11.com/assets/images/the-k-circle_192x192.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="//www.kcak11.com/assets/images/the-k-circle_128x128.png" />
+    <link href='//www.kcak11.com/favicon.ico' rel='icon' type='image/x-icon' />
+    <meta content="https://cdn.kcak11.com/profile/the-k-circle.png" itemprop="image" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0' name='viewport' />
+    <meta name="theme-color" content="#5aa0d3" />
+    <script type='text/javascript'>
+        var renderViaKcak11 = (window.location.href.indexOf("rendervia=kcak11") !== -1);
+        var _customWindow = window.top;
+        if (renderViaKcak11) {
+            _customWindow = window;
+        }
+        window.akweb = {
+            'importScript': function (scriptSrc) {
+                var scriptElem = document.createElement('script');
+                scriptElem.type = 'text/javascript';
+                scriptElem.src = scriptSrc;
+                document.getElementsByTagName('head')[0].appendChild(scriptElem);
+            },
+            hostname: ('' + _customWindow.location.hostname).toLowerCase(),
+            url: _customWindow.location.href
+        };
+    </script>
+    <script type="text/javascript">
+        akweb.importScript('//cdn.kcak11.com/cdn/playground-k/playground-k-master.js?ts=' + (new Date()).getTime());
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
